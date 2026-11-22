@@ -1,29 +1,23 @@
-# StudyPilot AI
+# StudyPilot AI — AI-Based Study Planner
 
-An AI-inspired study planner for students. Organize subjects, add study tasks, track progress, and generate a priority-based daily study plan.
+A responsive student study-planner web app. Add tasks, assign subjects, track completion, and generate a 7-day study schedule.
 
-## Features
-- Dashboard with study overview and progress
-- Subject and task management
-- Priority-based study plan generator
-- Persistent browser storage in the demo frontend
-- Express + SQLite backend starter in /server
+## Current demo features
+- Responsive dashboard and navigation
+- Create tasks with subject, deadline, and estimated study time
+- Mark tasks complete and track progress
+- Priority-based 7-day study plan generator
+- Saves demo data in the browser using localStorage
 
-## Run locally
+## Run / preview
+Open `index.html` in a browser, or serve the repository using a static web server.
 
-### Frontend
-Open index.html in a browser, or serve the repository with any static web server.
+## Publish with GitHub Pages
+A GitHub Actions workflow is included at `.github/workflows/deploy.yml`.
+1. Open this repository's **Settings → Pages**.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. Open the **Actions** tab and wait for **Deploy StudyPilot AI to GitHub Pages** to finish successfully.
+4. Your site will be available at https://darshpawar97-droid.github.io/StudyPilot-AI/
 
-### Backend API
-```bash
-cd server
-npm install
-npm start
-```
-The API runs at http://localhost:4000 and uses SQLite to store subjects and tasks.
-
-## Deployment
-The frontend can be hosted as a static site (for example GitHub Pages). Deploy the Express API separately on a Node.js host with persistent storage. Configure the frontend API URL before connecting it to the backend. The included browser demo works without the API and stores data in local browser storage.
-
-## Note
-The planner uses transparent priority/deadline-based scheduling rules; it is an AI-inspired academic project demo, not a connection to a hosted generative-AI model.
+## Important project note
+The currently published browser demo stores data locally in each browser. Its study-plan generator uses transparent deadline/effort-based scheduling rules; it does not call a hosted generative-AI model. A persistent multi-user backend and database deployment would be a separate next step.
